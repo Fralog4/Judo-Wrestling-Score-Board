@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Match di Judo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <style>
+      body, h1, p, label, span  {
+        text-shadow: 1px 1px 2px black;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-image: url('images/tatami.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    "
+  >
+<!-- Sezione Judoka 1 -->
+<section class="section is-medium has-text-white">
+    <style>
+      .shido-container {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+  
+      .shido-container figure {
+        margin: 0;
+      }
+    </style>
+  
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title is-3 has-text-weight-semibold">Judoka 1</h1>
+          <p class="subtitle is-5 has-text-weight-semibold">Digita il nome dell'atleta</p>
+          <input class="input" type="text" placeholder="Nome dell'atleta" />
+        </div>
+  
+        <div class="column">
+          <div class="block">
+            <button id="waza-ari" class="button is-link">Waza Ari</button>
+            <button id="ippon" class="button is-success">Ippon</button>
+            <button id="yuko" class="button is-info">Yuko</button>
+          </div>
+          <div class="block">
+            <button id="shido" class="button is-warning">Shido</button>
+            <button id="hansoku-make" class="button is-danger">Hansoku Make</button>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="card">
+            <div class="card-content" id="judoka1-card-content">
+              <div id="shido-container" class="shido-container"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column has-text-right">
+          <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
+          <span id="points-display" class="title has-text-weight-semibold">0</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Sezione Judoka 2 -->
+<section class="section is-medium has-text-white">
+    <style>
+      .shido-container {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+  
+      .shido-container figure {
+        margin: 0;
+      }
+    </style>
+  
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title is-3 has-text-weight-semibold">Judoka 2</h1>
+          <p class="subtitle is-5">Digita il nome dell'atleta</p>
+          <input class="input" type="text" placeholder="Nome dell'atleta" />
+        </div>
+  
+        <div class="column">
+          <div class="block">
+            <button id="waza-ari-two" class="button is-link">Waza Ari</button>
+            <button id="ippon-two" class="button is-success">Ippon</button>
+            <button id="yuko-two" class="button is-info">Yuko</button>
+          </div>
+          <div class="block">
+            <button id="shido-two" class="button is-warning">Shido</button>
+            <button id="hansoku-make-two" class="button is-danger">
+              Hansoku Make
+            </button>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div id="shido-container-two" class="shido-container"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="column has-text-right">
+          <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
+          <span id="points-display-two" class="title has-text-weight-semibold">0</span>
+        </div>
+      </div>
+    </div>
+
+        <!-- Sezione Timer e Reset -->
+        <section class="section is-small has-text-white">
+            <div class="container is-small has-text-centered">
+              <button id="reset-button" class="button is-warning is-medium">
+                Reset
+              </button>
+              <label class="label is-size-4 has-text-weight-semibold">Tempo:</label>
+              <input id="timer-display" class="input is-large has-text-centered has-text-weight-semibold" type="text" value="5:00" readonly />
+              <button id="start-timer" class="button is-primary mt-2">Avvia Timer</button>
+              <button id="stop-timer" class="button is-danger mt-2">
+                STOP              
+            </div>
+          </section>
+
+  </section>
+    <script src="app.js"></script>
+  </body>
+</html>
