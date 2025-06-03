@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Match di Lotta</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+        />
+        <style>
+          body, h1, p, label, span  {
+            text-shadow: 1px 1px 2px black;
+          }
+        </style>
+      </head>
+<body
+style="
+background-image: url('images/materassina.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;"
+>
+
+<section class="is-small has-text-white">
+  <a href="index.html" class="button is-link is-medium">Go back to Home</a>
+</section>
+
+<!-- Sezione Lottatore 1 -->
+
+<section class="section is-medium has-text-white">
+    
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <h1 class="title is-3 has-text-weight-semibold">Lottatore 1</h1>
+        <p class="subtitle is-5 has-text-weight-semibold">Digita il nome dell'atleta</p>
+        <input class="input has-text-weight-semibold" type="text" placeholder="Nome dell'atleta" />
+      </div>
+
+      <div class="column">
+        <div class="block">
+          <button id="one-point" class="button is-link is-medium is-dark">One Point</button>
+          <button id="two-points" class="button is-success is-medium is-dark">Two Points</button>
+          <div class="block"></div>
+          <button id="four-points" class="button is-info is-medium is-dark">Four Points</button>
+          <button id="five-points" class="button is-success is-medium is-dark">Five Points</button>
+        </div>
+        <div class="block">
+          <button id="yellow-card" class="button is-warning is-medium">Yellow Card</button>
+          <button id="red-card" class="button is-danger is-medium">Red Card</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content" id="wrestler1-card-content">
+            <div id="yellow-container" class="yellow-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column has-text-right">
+        <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
+        <span id="points-display" class="title has-text-weight-semibold">0</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sezione Lottatore 2 -->
+ 
+<section class="section is-medium has-text-white">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <h1 class="title is-3 has-text-weight-semibold">Lottatore 2</h1>
+        <p class="subtitle is-5 has-text-weight-semibold">Digita il nome dell'atleta</p>
+        <input class="input has-text-weight-semibold" type="text" placeholder="Nome dell'atleta" />
+      </div>
+
+      <div class="column">
+        <div class="block">
+          <button id="one-point2" class="button is-link is-medium is-dark">One Point</button>
+          <button id="two-points2" class="button is-success is-medium is-dark">Two Points</button>
+          <div class="block"></div>
+          <button id="yuko2" class="button is-info is-medium is-dark">Four Points</button>
+          <button id="five-points2" class="button is-success is-medium is-dark">Five Points</button>
+        </div>
+        <div class="block">
+          <button id="yellow-card2" class="button is-warning is-medium">Yellow Card</button>
+          <button id="red-card2" class="button is-danger is-medium">Red Card</button>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-content" id="wrestler2-card-content">
+            <div id="yellow-container2" class="yellow-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column has-text-right">
+        <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
+        <span id="points-display" class="title has-text-weight-semibold">0</span>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="app.js"></script>
+</body>
+</html>

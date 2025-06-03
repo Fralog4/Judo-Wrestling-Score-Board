@@ -6,10 +6,11 @@ const shidoButton = document.getElementById('shido');
 const hansokuButton = document.getElementById('hansoku-make');
 
 const pointsDisplay = document.getElementById('points-display');
-const shidoDisplay1 = document.getElementById('shido-count-1'); // crea se vuoi mostrare
 const shidoContainer = document.getElementById('shido-container');
+const yukoDisplay1 = document.getElementById('yuko-display'); 
 
 let judokaOnePoints = 0;
+let yukoPoints1 = 0;
 let admonitionJudokaOneCounter = 0;
 let isFinished = false;
 
@@ -31,7 +32,7 @@ ipponButton.addEventListener('click', () => {
 yukoButton.addEventListener('click', () => {
   if (isFinished) return;
   judokaOnePoints += 1;
-  pointsDisplay.textContent = judokaOnePoints;
+  yukoDisplay1.textContent = judokaOnePoints;
   checkWinner();
 });
 
@@ -39,7 +40,6 @@ shidoButton.addEventListener('click', () => {
     if (isFinished) return;
   
     admonitionJudokaOneCounter += 1;
-    if (shidoDisplay1) shidoDisplay1.textContent = admonitionJudokaOneCounter;
     checkWinner();
   
     if(admonitionJudokaOneCounter <=2){
@@ -90,6 +90,7 @@ const hansokuButtonTwo = document.getElementById('hansoku-make-two');
 
 const pointsDisplayTwo = document.getElementById('points-display-two');
 const shidoContainerTwo = document.getElementById('shido-container-two');
+const yukoDisplay2 = document.getElementById('yuko-display-two'); 
 
 let judokaTwoPoints = 0;
 let admonitionJudokaTwoCounter = 0;
@@ -112,7 +113,7 @@ ipponButtonTwo.addEventListener('click', () => {
 yukoButtonTwo.addEventListener('click', () => {
   if (isFinished) return;
   judokaTwoPoints += 1;
-  pointsDisplayTwo.textContent = judokaTwoPoints;
+  yukoDisplay2.textContent = judokaTwoPoints;
   checkWinner();
 });
 
@@ -120,7 +121,6 @@ shidoButtonTwo.addEventListener('click', () => {
     if (isFinished) return;
   
     admonitionJudokaTwoCounter += 1;
-    if (shidoDisplay1) shidoDisplay1.textContent = admonitionJudokaOneCounter;
     checkWinner();
   
     if(admonitionJudokaTwoCounter <=2){
@@ -195,15 +195,17 @@ const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', () => {
   judokaOnePoints = 0;
   judokaTwoPoints = 0;
+  yukoPoints1 = '';
   admonitionJudokaOneCounter = 0;
   admonitionJudokaTwoCounter = 0;
   isFinished = false;
   document.querySelectorAll('#shido-container figure, #shido-container-two figure').forEach(fig => fig.remove());
 
   pointsDisplay.textContent = judokaOnePoints;
+  yukoDisplay1.textContent = yukoPoints1;
   pointsDisplayTwo.textContent = judokaTwoPoints;
-  if (shidoDisplay1) shidoDisplay1.textContent = admonitionJudokaOneCounter;
-  if (shidoContainerTwo) shidoContainerTwo.textContent = admonitionJudokaTwoCounter;
+  if (shidoContainer) shidoContainer.textContent = '';
+  if (shidoContainerTwo) shidoContainerTwo.textContent = '';
 
   // riabilita tutti i button tranne il reset
   document

@@ -22,6 +22,11 @@
       background-repeat: no-repeat;
     "
   >
+
+  <section class="is-small has-text-white">
+    <a href="index.html" class="button is-link is-medium">Go back to Home</a>
+  </section>
+    
 <!-- Sezione Judoka 1 -->
 <section class="section is-medium has-text-white">
     <style>
@@ -41,18 +46,18 @@
         <div class="column">
           <h1 class="title is-3 has-text-weight-semibold">Judoka 1</h1>
           <p class="subtitle is-5 has-text-weight-semibold">Digita il nome dell'atleta</p>
-          <input class="input" type="text" placeholder="Nome dell'atleta" />
+          <input class="input has-text-weight-semibold" type="text" placeholder="Nome dell'atleta" />
         </div>
   
         <div class="column">
           <div class="block">
-            <button id="waza-ari" class="button is-link">Waza Ari</button>
-            <button id="ippon" class="button is-success">Ippon</button>
-            <button id="yuko" class="button is-info">Yuko</button>
+            <button id="waza-ari" class="button is-link is-medium">Waza Ari</button>
+            <button id="ippon" class="button is-success is-medium">Ippon</button>
+            <button id="yuko" class="button is-info is-medium">Yuko</button>
           </div>
           <div class="block">
-            <button id="shido" class="button is-warning">Shido</button>
-            <button id="hansoku-make" class="button is-danger">Hansoku Make</button>
+            <button id="shido" class="button is-warning is-medium">Shido</button>
+            <button id="hansoku-make" class="button is-danger is-medium">Hansoku Make</button>
           </div>
         </div>
   
@@ -66,6 +71,7 @@
   
         <div class="column has-text-right">
           <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
+          <span id="yuko-display" class="title has-text-weight-semibold"></span>
           <span id="points-display" class="title has-text-weight-semibold">0</span>
         </div>
       </div>
@@ -90,19 +96,19 @@
       <div class="columns is-vcentered">
         <div class="column">
           <h1 class="title is-3 has-text-weight-semibold">Judoka 2</h1>
-          <p class="subtitle is-5">Digita il nome dell'atleta</p>
-          <input class="input" type="text" placeholder="Nome dell'atleta" />
+          <p class="subtitle is-5 has-text-weight-semibold">Digita il nome dell'atleta</p>
+          <input class="input has-text-weight-semibold" type="text" placeholder="Nome dell'atleta" />
         </div>
   
         <div class="column">
           <div class="block">
-            <button id="waza-ari-two" class="button is-link">Waza Ari</button>
-            <button id="ippon-two" class="button is-success">Ippon</button>
-            <button id="yuko-two" class="button is-info">Yuko</button>
+            <button id="waza-ari-two" class="button is-link is-medium">Waza Ari</button>
+            <button id="ippon-two" class="button is-success is-medium">Ippon</button>
+            <button id="yuko-two" class="button is-info is-medium">Yuko</button>
           </div>
           <div class="block">
-            <button id="shido-two" class="button is-warning">Shido</button>
-            <button id="hansoku-make-two" class="button is-danger">
+            <button id="shido-two" class="button is-warning is-medium">Shido</button>
+            <button id="hansoku-make-two" class="button is-danger is-medium">
               Hansoku Make
             </button>
           </div>
@@ -118,6 +124,7 @@
   
         <div class="column has-text-right">
           <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
+          <span id="yuko-display-two" class="title has-text-weight-semibold"></span>
           <span id="points-display-two" class="title has-text-weight-semibold">0</span>
         </div>
       </div>
@@ -126,14 +133,13 @@
         <!-- Sezione Timer e Reset -->
         <section class="section is-small has-text-white">
             <div class="container is-small has-text-centered">
-              <button id="reset-button" class="button is-warning is-medium">
+              <button id="reset-button" class="button is-warning is-large">
                 Reset
               </button>
               <label class="label is-size-4 has-text-weight-semibold">Tempo:</label>
               <input id="timer-display" class="input is-large has-text-centered has-text-weight-semibold" type="text" value="5:00" readonly />
-              <button id="start-timer" class="button is-primary mt-2">Avvia Timer</button>
-              <button id="stop-timer" class="button is-danger mt-2">
-                STOP              
+              <button id="start-timer" class="button is-primary is-medium">Avvia Timer</button>
+              <button id="stop-timer" class="button is-danger is-medium">STOP</button>              
             </div>
           </section>
 
