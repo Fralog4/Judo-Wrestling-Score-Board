@@ -68,7 +68,6 @@ shidoButton.addEventListener('click', () => {
 hansokuButton.addEventListener('click', () => {
     if (isFinished) return;
     admonitionJudokaOneCounter += 3;
-    if (shidoDisplay1) shidoDisplay1.textContent = admonitionJudokaOneCounter;
     checkWinner();
     
     const fig = document.createElement('figure');
@@ -149,7 +148,6 @@ shidoButtonTwo.addEventListener('click', () => {
 hansokuButtonTwo.addEventListener('click', () => {
   if (isFinished) return;
   admonitionJudokaTwoCounter += 3;
-  if (shidoContainerTwo) shidoContainerTwo.textContent = admonitionJudokaTwoCounter;
   checkWinner();
 
   const fig = document.createElement('figure');
