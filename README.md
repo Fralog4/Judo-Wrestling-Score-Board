@@ -25,7 +25,7 @@ Un'applicazione web interattiva per gestire e arbitrare match di Judo e Wrestlin
 
 ## Come Utilizzare
 
-1. Clona il repository o accedi al seguente link.
+1. Clona il repository o accedi al seguente link https://fralog4.github.io/Judo-Wrestling-Score-Board/.
 2. Assicurati che tutte le immagini siano nella cartella `assets/images`.
 3. Apri `index.html` in un browser per accedere alla homepage.
 4. Naviga verso le pagine dedicate a Judo o Wrestling per iniziare a gestire i match.
