@@ -31,8 +31,8 @@ ipponButton.addEventListener('click', () => {
 });
 yukoButton.addEventListener('click', () => {
   if (isFinished) return;
-  judokaOnePoints += 1;
-  yukoDisplay1.textContent = judokaOnePoints;
+  yukoPoints1 += 1;
+  yukoDisplay1.textContent = yukoPoints1;
   checkWinner();
 });
 
@@ -93,6 +93,7 @@ const shidoContainerTwo = document.getElementById('shido-container-two');
 const yukoDisplay2 = document.getElementById('yuko-display-two'); 
 
 let judokaTwoPoints = 0;
+let yukoPoints2 = 0;
 let admonitionJudokaTwoCounter = 0;
 
 [wazaButtonTwo, ipponButtonTwo, yukoButtonTwo, shidoButtonTwo, hansokuButtonTwo]
@@ -112,8 +113,8 @@ ipponButtonTwo.addEventListener('click', () => {
 });
 yukoButtonTwo.addEventListener('click', () => {
   if (isFinished) return;
-  judokaTwoPoints += 1;
-  yukoDisplay2.textContent = judokaTwoPoints;
+  yukoPoints2 += 1;
+  yukoDisplay2.textContent = yukoPoints2;
   checkWinner();
 });
 
@@ -162,7 +163,6 @@ hansokuButtonTwo.addEventListener('click', () => {
   shidoContainerTwo.appendChild(fig);
 });
 
-
 // Controllo vincitore
 function checkWinner() {
   if (judokaOnePoints >= 10) {
@@ -196,6 +196,7 @@ resetButton.addEventListener('click', () => {
   judokaOnePoints = 0;
   judokaTwoPoints = 0;
   yukoPoints1 = '';
+  yukoPoints2 = '';
   admonitionJudokaOneCounter = 0;
   admonitionJudokaTwoCounter = 0;
   isFinished = false;
@@ -203,10 +204,13 @@ resetButton.addEventListener('click', () => {
 
   pointsDisplay.textContent = judokaOnePoints;
   yukoDisplay1.textContent = yukoPoints1;
+  yukoDisplay2.textContent = yukoPoints2;
   pointsDisplayTwo.textContent = judokaTwoPoints;
   if (shidoContainer) shidoContainer.textContent = '';
   if (shidoContainerTwo) shidoContainerTwo.textContent = '';
 
+  clearInterval(timerInterval); // Ferma il timer se in esecuzione
+  timerDisplay.value = '5:00'; // Reset del timer
   // riabilita tutti i button tranne il reset
   document
     .querySelectorAll('button:not(#reset-button)')
