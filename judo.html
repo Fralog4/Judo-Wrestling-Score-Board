@@ -12,6 +12,9 @@
       body, h1, p, label, span  {
         text-shadow: 1px 1px 2px black;
       }
+      .is-hidden {
+        display: none;
+      }
     </style>
   </head>
   <body
@@ -71,7 +74,7 @@
   
         <div class="column has-text-right">
           <p class="title is-3 has-text-weight-semibold">Punteggio:</p>
-          <span id="yuko-display" class="title has-text-weight-semibold"></span>
+          <span id="yuko-display" class="title has-text-weight-semibold is-hidden"></span>
           <span id="points-display" class="title has-text-weight-semibold">0</span>
         </div>
       </div>

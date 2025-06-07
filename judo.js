@@ -31,6 +31,7 @@ ipponButton.addEventListener('click', () => {
 });
 yukoButton.addEventListener('click', () => {
   if (isFinished) return;
+  yukoDisplay1.classList.remove('is-hidden');
   yukoPoints1 += 1;
   yukoDisplay1.textContent = yukoPoints1;
   checkWinner();
@@ -112,6 +113,8 @@ ipponButtonTwo.addEventListener('click', () => {
 });
 yukoButtonTwo.addEventListener('click', () => {
   if (isFinished) return;
+  // Rendi visibile il punteggio
+  yukoDisplay2.classList.remove('is-hidden');
   yukoPoints2 += 1;
   yukoDisplay2.textContent = yukoPoints2;
   checkWinner();
@@ -193,8 +196,8 @@ const resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', () => {
   judokaOnePoints = 0;
   judokaTwoPoints = 0;
-  yukoPoints1 = '';
-  yukoPoints2 = '';
+  yukoPoints1 = 0;
+  yukoPoints2 = 0;
   admonitionJudokaOneCounter = 0;
   admonitionJudokaTwoCounter = 0;
   isFinished = false;
@@ -202,7 +205,9 @@ resetButton.addEventListener('click', () => {
 
   pointsDisplay.textContent = judokaOnePoints;
   yukoDisplay1.textContent = yukoPoints1;
+  yukoDisplay1.classList.add('is-hidden'); // Nascondi il punteggio Yuko
   yukoDisplay2.textContent = yukoPoints2;
+  yukoDisplay2.classList.add('is-hidden'); // Nascondi il punteggio Yuko
   pointsDisplayTwo.textContent = judokaTwoPoints;
   if (shidoContainer) shidoContainer.textContent = '';
   if (shidoContainerTwo) shidoContainerTwo.textContent = '';
